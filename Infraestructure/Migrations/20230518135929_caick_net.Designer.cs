@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infraestructure.Migrations
 {
     [DbContext(typeof(ContextBase))]
-    [Migration("20230515140606_Teste_caick")]
-    partial class Teste_caick
+    [Migration("20230518135929_caick_net")]
+    partial class caick_net
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

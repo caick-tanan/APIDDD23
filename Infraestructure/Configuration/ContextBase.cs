@@ -33,7 +33,7 @@ namespace Infraestructure.Configuration
 
         public string ObterStringConexao() //String de conexão local do meu banco
         {
-           return "Data Source=DESKTOP-L8175GI\\SQLEXPRESS;Initial Catalog=master;Integrated Security=True";
+           return "Data Source=DESKTOP-L8175GI\\SQLEXPRESS;Initial Catalog=master;Integrated Security=False;User ID=sa;Password=123456;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
         }
     }
 }

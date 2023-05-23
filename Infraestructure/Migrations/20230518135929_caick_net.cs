@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infraestructure.Migrations
 {
-    public partial class Teste_caick : Migration
+    public partial class caick_net : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

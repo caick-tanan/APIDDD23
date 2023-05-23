@@ -2,11 +2,13 @@ using AutoMapper;
 using Domain.Interfaces;
 using Domain.Interfaces.Generics;
 using Domain.Interfaces.InterfceServices;
+using Domain.InterfacesExternal;
 using Domain.Services;
 using Entities.Entities;
 using Infraestructure.Configuration;
 using Infraestructure.Repository.Generics;
 using Infraestructure.Repository.Repositories;
+using Infrastructure.RepositoriesExternal;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -96,6 +98,7 @@ builder.Services.AddRazorPages();
 // INTERFACE E REPOSITORIO
 builder.Services.AddSingleton(typeof(IGeneric<>), typeof(RepositoryGenerics<>));
 builder.Services.AddSingleton<IMessage, RepositoryMessage>();
+builder.Services.AddSingleton<IProduto, RepositoryProduto>();
 
 // SERVIÇO DOMINIO
 builder.Services.AddSingleton<IServiceMessage, ServiceMessage>();
@@ -157,7 +160,9 @@ if (app.Environment.IsDevelopment())
 
 //app.UseCors(b => b.WithOrigins(urlDev, urlHML, urlPROD));
 
-var devClient = "http://localhost:4200";
+/*var devClient = "http://localhost:4200";*/
+var devClient = "http://localhost:3000";
+
 app.UseCors(x => x
 .AllowAnyOrigin()
 .AllowAnyMethod()
